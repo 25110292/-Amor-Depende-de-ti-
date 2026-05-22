@@ -28,7 +28,7 @@ Guiar la historia del protagonista a través de diferentes dilemas emocionales. 
 
 ### 👥 Equipo
 * **Integrante 1:** Ximena Carolina Gonzalez Atienzo
-* **Integrante 2:** Ana Sofia (@[usuario-github])
+* **Integrante 2:** Ana Sofia Rodriguez Sanchez (@[usuario-github])
 
 ### 🛠️ Tecnologías
 
