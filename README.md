@@ -1,6 +1,6 @@
 # -Amor-Depende-de-ti-
 
-# 🎭 Destinos del Corazón (o el nombre de tu juego)
+# 🎭¿Amor? Depende de ti 
 
 ## 📝 Descripción del Proyecto
 Un juego de romance y narrativa interactiva basado en la toma de decisiones. A través de una serie de eventos cotidianos y cruciales en la vida de una pareja, el jugador deberá elegir cómo reaccionar, moldeando el destino de la relación y descubriendo que el amor puede tomar caminos muy diferentes (y a veces peligrosos).
