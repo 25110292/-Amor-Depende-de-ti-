@@ -1,5 +1,5 @@
-@startuml 
-
+@startuml
+{
 class Hombre
 class Mujer
 class Nombre
@@ -13,5 +13,5 @@ class Pelea
 Usiario "1" o--"3"Opcion 
 Hombre o-- Pareja 
 Mujer o-- pareja 
-
+}
 @enduml 
