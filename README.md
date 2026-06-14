@@ -21,20 +21,16 @@ Guiar la historia del protagonista a través de diferentes dilemas emocionales. 
 ### 🏆 Características
 * **4 Finales Completamente Diferentes:**
   1. Final Romántico: Logran superar las adversidades con madurez y terminan siendo felices juntos.
-  2. Final Tóxico:La relación se llena de celos, manipulación y codependencia, pero deciden seguir juntos.
-  3. Final de Costumbre:El amor se apaga; se quedan juntos únicamente por rutina, miedo a la soledad y comodidad.
-  4. Final Trágico: El desenlace más oscuro, donde la obsesión y la locura consumen a uno de los personajes, terminando con la vida del otro.
+  2. Final de Costumbre:El amor se apaga; se quedan juntos únicamente por rutina, miedo a la soledad y comodidad.
+  3. Final Trágico: El desenlace más oscuro, donde la obsesión y la locura consumen a uno de los personajes, terminando con la vida del otro.
 
 
 ### 👥 Equipo
 * **Integrante 1:** Ximena Carolina Gonzalez Atienzo
 <<<<<<< HEAD
-* **Integrante 2:** Ana Sofia Rodriguez Sanchez (@[usuario-github])
+* **Integrante 2:** Ana Sofia Rodriguez Sanchez 
 =======
 * **Integrante 2:** Ana Sofia 
 >>>>>>> 83ba12739fc2e5146c1ca851bf86900b466b94c3
 
-### 🛠️ Tecnologías
 
-
-### 📜 Créditos
