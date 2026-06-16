@@ -113,7 +113,7 @@ class PantallaEvento {
     - botones          : std::array<sf::RectangleShape, 3>
     - textoOpciones    : std::array<sf::Text, 3>
     - imagenFondo      : sf::Sprite
-    --
+    
     + cargarEvento(ev : Evento) : void
     + handleEvent(e : sf::Event) : void
     + update(dt : float) : void
@@ -174,13 +174,7 @@ PantallaEvento ..> Evento : usa
 PantallaFinal   ..> Final  : usa
 PantallaInicio  ..> GameState : inicializa >
 
-note right of GameState
-  determinarFinal():
-  • ≥3 opciones PSICOPATA → PSICOPATA
-  • 22–30 pts → ROMANTICO
-  • 13–21 pts → PORLASTIMA
-  • 5–12 pts  → TOXICO
-  • 0–4 pts   → PSICOPATA
+
 
 
 @enduml
