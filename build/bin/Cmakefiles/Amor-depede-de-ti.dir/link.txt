@@ -1,0 +1,3 @@
+C:\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\amor_depende_de_ti.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\amor_depende_de_ti.dir/objects.a @CMakeFiles\amor_depende_de_ti.dir\objects1.rsp
+C:\msys64\mingw64\bin\c++.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\amor_depende_de_ti.dir/objects.a -Wl,--no-whole-archive -o bin\amor_depende_de_ti.exe -Wl,--out-implib,libamor_depende_de_ti.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\amor_depende_de_ti.dir\linkLibs.rsp

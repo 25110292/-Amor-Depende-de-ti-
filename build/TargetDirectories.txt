@@ -1,0 +1,3 @@
+C:/Users/AuxAd/Desktop/AmorDependeDeTi/build/CMakeFiles/amor_depende_de_ti.dir
+C:/Users/AuxAd/Desktop/AmorDependeDeTi/build/CMakeFiles/edit_cache.dir
+C:/Users/AuxAd/Desktop/AmorDependeDeTi/build/CMakeFiles/rebuild_cache.dir
