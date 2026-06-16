@@ -1,17 +1,186 @@
-@startuml
-{
-class Hombre
-class Mujer
-class Nombre
-class Pareja 
-class Usuario
-class Opcion 
-class Arma 
-class Evento 
-class Pelea
-
-Usiario "1" o--"3"Opcion 
-Hombre o-- Pareja 
-Mujer o-- pareja 
+@startuml "¿Amor? Depende de ti"
+enum TipoOpcion {
+    ROMANTICO    ' +3 pts
+    PORLASTIMA   ' +2 pts
+    TOXICO       ' +1 pt
+    PSICOPATA    ' +0 pts
 }
-@enduml 
+
+enum TipoFinal {
+    ROMANTICO    ' 22–30 pts
+    PORLASTIMA   ' 13–21 pts
+    TOXICO       ' 5–12 pts
+    PSICOPATA    ' 0–4 pts o ≥3 opciones 
+}
+
+enum Genero {
+    HOMBRE
+    MUJER
+}
+
+class Opcion {
+    + texto : std::string
+    + tipo  : TipoOpcion
+    + puntos : int
+}
+
+class Evento {
+    + id          : int
+    + titulo      : std::string
+    + descripcion : std::string
+    + imagenFondo : std::string
+    + opciones    : std::vector<Opcion>
+    --
+    + getOpcion(i : int) : Opcion
+}
+
+class Final {
+    + tipo        : TipoFinal
+    + titulo      : std::string
+    + descripcion : std::string
+    + imagenFondo : std::string
+}
+
+class Personaje {
+    # nombre : std::string
+    --
+    + getNombre() : std::string
+    + setNombre(n : std::string) : void
+}
+
+class Protagonista {
+    - genero : Genero
+    --
+    + getGenero() : Genero
+    + setGenero(g : Genero) : void
+}
+
+class InteresRomantico {
+}
+
+class GameState {
+    - protagonista      : Protagonista
+    - interesRomantico  : InteresRomantico
+    - puntajeTotal      : int
+    - eventoActual      : int
+    - contadorPsicopata : int
+    - historialOpciones : std::vector<TipoOpcion>
+    --
+    + registrarOpcion(o : Opcion) : void
+    + getPuntaje() : int
+    + getEventoActual() : int
+    + determinarFinal() : TipoFinal
+    + esFinalPsicopata() : bool
+}
+
+class EventManager {
+    - eventos : std::vector<Evento>
+    --
+    + cargarEventos() : void
+    + getEvento(i : int) : Evento&
+    + totalEventos() : int
+}
+
+class FinalManager {
+    - finales : std::vector<Final>
+    --
+    + cargarFinales() : void
+    + getFinal(tipo : TipoFinal) : Final&
+}
+
+abstract class Screen {
+    # window : sf::RenderWindow&
+    # state  : GameState&
+    --
+    + {abstract} handleEvent(e : sf::Event) : void
+    + {abstract} update(dt : float) : void
+    + {abstract} render() : void
+}
+
+class PantallaInicio {
+    - inputNombre1  : sf::Text
+    - inputNombre2  : sf::Text
+    - selectorGenero : sf::Text
+    - botonJugar    : sf::RectangleShape
+    --
+    + handleEvent(e : sf::Event) : void
+    + update(dt : float) : void
+    + render() : void
+}
+
+class PantallaEvento {
+    - textoDescripcion : sf::Text
+    - botones          : std::array<sf::RectangleShape, 3>
+    - textoOpciones    : std::array<sf::Text, 3>
+    - imagenFondo      : sf::Sprite
+    --
+    + cargarEvento(ev : Evento) : void
+    + handleEvent(e : sf::Event) : void
+    + update(dt : float) : void
+    + render() : void
+}
+
+class PantallaFinal {
+    - textoFinal  : sf::Text
+    - imagenFondo : sf::Sprite
+    - textoPuntaje : sf::Text
+    --
+    + cargarFinal(f : Final, pts : int) : void
+    + handleEvent(e : sf::Event) : void
+    + update(dt : float) : void
+    + render() : void
+}
+
+class Game {
+    - window       : sf::RenderWindow
+    - state        : GameState
+    - eventMgr     : EventManager
+    - finalMgr     : FinalManager
+    - pantallaActual : Screen*
+    --
+    + run() : void
+    - init() : void
+    - cambiarPantalla(s : Screen*) : void
+    - loop() : void
+}
+
+Personaje <|-- Protagonista
+Personaje <|-- InteresRomantico
+
+Protagonista "1" --o "1" GameState
+InteresRomantico "1" --o "1" GameState
+
+Evento "1" *-- "3" Opcion
+Opcion --> TipoOpcion
+Evento --> TipoFinal : genera contexto
+
+GameState --> TipoFinal : determina
+GameState --> TipoOpcion
+
+EventManager "1" *-- "10" Evento
+FinalManager "1" *-- "4" Final
+Final --> TipoFinal
+
+Screen <|-- PantallaInicio
+Screen <|-- PantallaEvento
+Screen <|-- PantallaFinal
+
+Game "1" *-- "1" GameState
+Game "1" *-- "1" EventManager
+Game "1" *-- "1" FinalManager
+Game --> Screen : gestiona >
+
+PantallaEvento ..> Evento : usa
+PantallaFinal   ..> Final  : usa
+PantallaInicio  ..> GameState : inicializa >
+
+note right of GameState
+  determinarFinal():
+  • ≥3 opciones PSICOPATA → PSICOPATA
+  • 22–30 pts → ROMANTICO
+  • 13–21 pts → PORLASTIMA
+  • 5–12 pts  → TOXICO
+  • 0–4 pts   → PSICOPATA
+
+
+@enduml
