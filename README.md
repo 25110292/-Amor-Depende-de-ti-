@@ -148,7 +148,7 @@ cp /mingw64/bin/libsfml-graphics-3.dll /mingw64/bin/libsfml-window-3.dll \
 
 | Rol | Nombre |
 |-----|--------|
-| Desarrollo y Programacion | Sofia Rodriguez |
+| Desarrollo y Programacion | Ana Sofia Rodriguez |
 | Narrativa y Diseno | Ximena Gonzalez |
 
 **Musica:** Pixabay — Royalty Free Music  
