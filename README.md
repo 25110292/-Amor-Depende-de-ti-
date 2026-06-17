@@ -4,99 +4,66 @@
 
 ---
 
-## 📖 Descripcion
+## 📝 Descripcion del Proyecto
 
-**Amor? Depende de ti** es una novela visual desarrollada en C++ con SFML 3, donde el jugador vive una historia romantica a traves de 10 eventos clave. Cada decision tomada acumula puntos que determinan uno de los **4 finales posibles**, reflejando el tipo de relacion que construiste a lo largo del juego.
+**Amor? Depende de ti** es una novela visual desarrollada en C++ con SFML 3, donde el jugador vive una historia romantica a traves de 10 eventos clave. Cada decision tomada acumula puntos que determinan uno de los **finales posibles**, reflejando el tipo de relacion que construiste a lo largo del juego.
 
 ---
 
-<<<<<<< HEAD
-### 🏆 Características
-* **4 Finales Completamente Diferentes:**
-  1. Final Romántico: Logran superar las adversidades con madurez y terminan siendo felices juntos.
-  2. Final de Costumbre:El amor se apaga; se quedan juntos únicamente por rutina, miedo a la soledad y comodidad.
-  3. Final Trágico: El desenlace más oscuro, donde la obsesión y la locura consumen a uno de los personajes, terminando con la vida del otro.
-=======
-## 🎮 Como jugar
->>>>>>> 880b7a3a406e2c7c9a8960e24bfb795d39f8e17e
+## 🎯 Objetivo del Juego
 
-1. Ingresa tu nombre y el de tu interes romantico
-2. Elige tu genero (Hombre / Mujer)
-3. Lee cada situacion y elige una de las 3 opciones disponibles
-4. Tus decisiones acumulan puntos en secreto
-5. Al terminar los 10 eventos, descubre que tipo de relacion construiste
+Vivir una historia de amor adolescente tomando decisiones en 10 momentos clave de la relacion. Cada eleccion suma puntos en secreto, y el tipo de relacion que el jugador construye con el tiempo determina cual de los finales disponibles obtiene al terminar el juego.
 
-<<<<<<< HEAD
-### 👥 Equipo
+---
+
+## 🎮 Controles
+
+* **Clic izquierdo:** Seleccionar una opcion de dialogo
+* **Boton "Pausa" o ESC:** Pausar el juego
+* **Boton "< Volver":** Regresar al evento anterior y cambiar tu decision
+* **Clic / Enter:** Continuar o cerrar pantallas
+
+---
+
+## ⚙️ Mecanicas
+
+1. El jugador ingresa su nombre y el de su interes romantico
+2. Elige su genero (Hombre / Mujer), lo cual determina que imagenes se muestran a lo largo del juego
+3. En cada uno de los 10 eventos, debe elegir entre 3 opciones de dialogo
+4. Cada opcion otorga una cantidad distinta de puntos de forma oculta para el jugador
+5. Al completar los 10 eventos, el puntaje total (y el numero de opciones "Psicopata" elegidas) determina el final que se desbloquea
+6. El jugador puede pausar en cualquier momento o regresar al evento anterior si se equivoca
+
+---
+
+## 🏆 Caracteristicas
+
+* **10 eventos narrativos** con ilustraciones unicas para cada decision de genero
+* **3 finales completamente diferentes:**
+  1. **Final Romantico:** Logran superar las adversidades con madurez y terminan siendo felices juntos
+  2. **Final de Costumbre:** El amor se apaga; se quedan juntos unicamente por rutina, miedo a la soledad y comodidad
+  3. **Final Tragico:** El desenlace mas oscuro, donde la obsesion y la conducta toxica consumen la relacion
+* **Sistema de pausa y retroceso** para cambiar decisiones pasadas
+* **Barra de progreso** que indica el avance a traves de los 10 eventos
+* **Musica de piano original** que acompana la experiencia
+* **Pantalla de creditos** al finalizar la historia
+
+---
+
+## 👥 Equipo
+
 * **Integrante 1:** Ximena Carolina Gonzalez Atienzo
-<<<<<<< HEAD
-* **Integrante 2:** Ana Sofia Rodriguez Sanchez 
-=======
-* **Integrante 2:** Ana Sofia 
->>>>>>> 83ba12739fc2e5146c1ca851bf86900b466b94c3
-
-
-=======
-### Controles
-| Accion | Control |
-|--------|---------|
-| Seleccionar opcion | Clic izquierdo |
-| Pausar juego | Boton "Pausa" o ESC |
-| Regresar al evento anterior | Boton "< Volver" |
-| Continuar / Cerrar | Clic o Enter |
-
----
-
-## 💘 Finales posibles
-
-| Final | Condicion |
-|-------|-----------|
-| 💖 **Romantico** | 22 o mas puntos |
-| 😶 **Por Lastima** | 13 a 21 puntos |
-| 🔥 **Toxico** | 5 a 12 puntos |
-| 🚨 **Psicopata** | 3 o mas opciones psicopata elegidas |
+* **Integrante 2:** Ana Sofia Rodriguez Sanchez
 
 ---
 
 ## 🛠️ Tecnologias
 
-- **Lenguaje:** C++17
-- **Motor grafico:** SFML 3.0 (Simple and Fast Multimedia Library)
-- **Compilador:** MinGW-w64 (GCC 15.2)
-- **Build system:** CMake 3.10+
-- **Plataforma:** Windows (MSYS2 / MinGW64)
-
----
-
-## 📁 Estructura del proyecto
-
-```
-AmorDependeDeTi/
-├── src/
-│   ├── main.cpp          # Punto de entrada
-│   ├── Game.cpp          # Logica principal y renderizado
-│   ├── Player.cpp        # Datos y puntuacion del jugador
-│   └── EventManager.cpp  # Carga de los 10 eventos
-├── include/
-│   ├── Game.h
-│   ├── Player.h
-│   ├── Event.h
-│   └── EventManager.h
-├── assets/
-│   ├── COVER.png                  # Portada
-│   ├── capturaEH1.png             # Imagenes de eventos (EH = Hombre, EM = Mujer)
-│   ├── Captura_EH2.png ... EH10
-│   ├── capturaEM1.png
-│   ├── Captura_EM2.png ... EM10
-│   ├── Captura_EHM4.png           # Evento compartido (ambos generos)
-│   ├── Final1.png                 # Imagen final Romantico
-│   ├── Final2.png                 # Imagen final Por Lastima
-│   ├── Final3.png                 # Imagen final Toxico / Psicopata
-│   ├── musica.ogg                 # Musica de fondo (piano suave)
-│   └── PlaywriteGBJ-VariableFont_wght.ttf  # Fuente del juego
-├── CMakeLists.txt
-└── README.md
-```
+* **Motor/Framework:** SFML 3.0 (Simple and Fast Multimedia Library)
+* **Lenguaje:** C++17
+* **Build system:** CMake 3.10+
+* **Compilador:** MinGW-w64 (GCC 15.2)
+* **Plataforma:** Windows (MSYS2 / MinGW64)
 
 ---
 
@@ -144,24 +111,48 @@ cp /mingw64/bin/libsfml-graphics-3.dll /mingw64/bin/libsfml-window-3.dll \
 
 ---
 
-## 👩‍💻 Creditos
+## 📁 Estructura del proyecto
 
-| Rol | Nombre |
-|-----|--------|
-| Desarrollo y Programacion | Ana Sofia Rodriguez |
-| Narrativa y Diseno | Ximena Gonzalez |
-
-**Musica:** Pixabay — Royalty Free Music  
-**Motor:** SFML 3.0 — [sfml-dev.org](https://www.sfml-dev.org)
+```
+AmorDependeDeTi/
+├── src/
+│   ├── main.cpp          # Punto de entrada
+│   ├── Game.cpp          # Logica principal y renderizado
+│   ├── Player.cpp        # Datos y puntuacion del jugador
+│   └── EventManager.cpp  # Carga de los 10 eventos
+├── include/
+│   ├── Game.h
+│   ├── Player.h
+│   ├── Event.h
+│   └── EventManager.h
+├── assets/
+│   ├── COVER.png                  # Portada
+│   ├── capturaEH1.png             # Imagenes de eventos (EH = Hombre, EM = Mujer)
+│   ├── Captura_EH2.png ... EH10
+│   ├── capturaEM1.png
+│   ├── Captura_EM2.png ... EM10
+│   ├── Captura_EHM4.png           # Evento compartido (ambos generos)
+│   ├── Final1.png                 # Imagen final Romantico
+│   ├── Final2.png                 # Imagen final Por Lastima
+│   ├── Final3.png                 # Imagen final Toxico / Psicopata
+│   ├── musica.ogg                 # Musica de fondo (piano suave)
+│   └── PlaywriteGBJ-VariableFont_wght.ttf  # Fuente del juego
+├── bin/                  # Ejecutable .exe y DLLs
+├── gallery/              # cover.png para CETUS
+├── screenshots/          # Capturas para CETUS
+├── video/                # demo.mp4 para CETUS
+├── CMakeLists.txt
+└── README.md
+```
 
 ---
 
-## 📄 Licencia
+## 📜 Creditos
 
-Este proyecto fue desarrollado con fines academicos.  
-Las imagenes y musica utilizadas son de uso libre (royalty free).
+* **Musica:** Pixabay — Royalty Free Music
+* **Motor:** SFML 3.0 — [sfml-dev.org](https://www.sfml-dev.org)
+* Proyecto desarrollado con fines academicos
 
 ---
 
 *Hecho con 💕 en C++*
->>>>>>> 880b7a3a406e2c7c9a8960e24bfb795d39f8e17e
