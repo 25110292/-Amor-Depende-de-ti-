@@ -1,5 +1,4 @@
-@startuml
-"¿Amor? Depende de ti
+@startuml ¿Amor? Depende de ti
 
 enum GameState {
     COVER
