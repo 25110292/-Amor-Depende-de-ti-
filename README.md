@@ -115,6 +115,9 @@ cp /mingw64/bin/libsfml-graphics-3.dll /mingw64/bin/libsfml-window-3.dll \
 
 ```
 AmorDependeDeTi/
+├── .github/
+|    ├── workflows/
+|        ├── publish.yml           *GitHub Action (ya incluido)
 ├── src/
 │   ├── main.cpp          # Punto de entrada
 │   ├── Game.cpp          # Logica principal y renderizado
@@ -151,6 +154,8 @@ AmorDependeDeTi/
 
 * **Musica:** Pixabay — Royalty Free Music
 * **Motor:** SFML 3.0 — [sfml-dev.org](https://www.sfml-dev.org)
+* **Imagenes**: CHAT GPT
+* **Creadores**: Ximena Atienzo y Sofia Rodriguez 
 * Proyecto desarrollado con fines academicos
 
 ---
